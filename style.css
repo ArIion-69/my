@@ -1,0 +1,42 @@
+.card{
+    position: relative;
+    width: 250px;
+    height: 350px;
+    margin: 10%;
+    background: url('./My.png') center no-repeat;
+    background-size: cover;
+    border: 2px solid violet;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: all .5s ease-out;
+}
+
+.wrapper-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 500px;
+}
+
+
+.card::after{
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-bottom: 10px solid red;
+    border-right: 10px solid red;
+    right: 20px;
+    bottom: -40px;
+}
+.card::before{
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-left: 10px solid red;
+    border-top: 10px solid red;
+    left: -20px;
+    top: -40px;
+}
